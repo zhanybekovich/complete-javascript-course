@@ -1,44 +1,25 @@
-// let js = "amazing";
-// console.log(40 + 8 + 23 - 10);
-// console.log("Jonas");
-// console.log(23);
-
-// let firstName = "Jonas";
-// console.log(firstName);
-
 /**
- * Type Conversion is when we explicitly convert types
+ * Truthy and Falsy values
  */
 
-// Conversion to number
-let inputYear = "1991";
-inputYear = Number(inputYear);
-console.log(inputYear + 18);
-
-let a = "Hello";
-let b = 5;
-console.log(a + b);
-console.log(a - b);
-console.log(a * b);
-console.log(a / b);
-
-console.log(+"5" + 5);
-console.log(parseFloat("50.9") + 5);
-console.log(parseInt("50") + 5);
-
-// conversion to string
-console.log(String(23));
-console.log("" + 45);
-
-// conversion to boolean
+// Falsy values: 0, "", undefined, null, NaN
 console.log(Boolean(0));
-console.log(Boolean(undefined));
-console.log(Boolean("Jonas"));
-console.log(Boolean({}));
 console.log(Boolean(""));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+console.log(Boolean(NaN));
 
-// type coercion
-console.log("I'm" + 23 + "years old");
-console.log("23" - "10" - 3);
-console.log("23" / "2");
-console.log("23" * "18");
+// Truthy values: NOT Falsy values
+console.log(Boolean(-10));
+console.log(Boolean("10"));
+console.log(Boolean("Hello"));
+console.log(Boolean({}));
+console.log(Boolean([]));
+
+// Type coercion happens in logical and comparison operators
+const money = 1;
+if (money) {
+  console.log("I've money");
+} else {
+  console.log("Find a job!");
+}
